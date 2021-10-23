@@ -28,7 +28,7 @@
           <img src="images/people.jpg" alt="Foto Pessoal" />
         </div>
 
-        <h1>Luis Henrique</h1>
+        <h1 id="UserName">Luis Henrique</h1>
         <a href="https://github.com/luisdasilvahenrique">
           <img src="images/github.svg" alt="Imagem do github" /> Luis
           Henrique</a
@@ -36,26 +36,26 @@
 
         <p>Sou um estudante de front-end, curso redes de computadores na Universidade Federal do Ceará e adoro tecnologia, todos os dias aprendendo algo novo!</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com/maykbrito" target="_blank">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="" target="_blank">
               <img src="images/youtube.svg" alt="Ícone YouTube" />
             </a>
           </li>
 
-          <li>
+          <li class="twitter">
             <a href="https://twitter.com/maykbrito" target="_blank">
               <img src="images/twitter.svg" alt="Ícone twitter" />
             </a>
           </li>
 
-          <li>
+          <li class="facebook">
             <a href="https://facebook.com/maykbrito" target="_blank">
               <img src="images/facebook.svg" alt="Ícone facebook" />
             </a>
           </li>
 
-          <li>
+          <li class="instagram">
             <a href="https://instagram.com/maykbrito" target="_blank">
               <img src="images/instagram.svg" alt="Ícone instagram" />
             </a>
@@ -66,11 +66,8 @@
     </main>
 
     <script>
-       function showMeSomething(){
-        alert(links.instagram)
-      }
 
-      const links = {
+      const LinksSocialMedia = {
         github: 'luisdasilvahenrique',
         youtube: 'UC34AXdpl4_2g3QIWjHaN-mA',
         facebook: 'luis.enrik.52',
@@ -78,9 +75,18 @@
         twitter: 'maykbrito',
       }
 
-      showMeSomething()
+      function changeSocialMediaLinks(){
+        for(let li of socialLinks.children){
+          const social = li.getAttribute('class')
+          
+        li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+          // alert(li.children[0].href)
+        }
 
-      
+      }
+
+      changeSocialMediaLinks()
+     
     </script>
 
   </body>
