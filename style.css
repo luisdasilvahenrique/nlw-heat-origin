@@ -16,6 +16,7 @@ body {
 body {
   display: grid;
   place-items: center;
+  background-color: #29292E;
 }
 
 main {
