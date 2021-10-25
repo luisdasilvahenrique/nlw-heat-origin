@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Luis Henrique - DoWhile 2021</title>
 
     <link rel="stylesheet" href="style.css" />
     
+    <!-- Icon -->
+    <link rel="shortcut icon" href="images/icons8-crachá-48.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,16 +28,19 @@
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
 
-          <img src="images/people.jpg" alt="Foto Pessoal" />
+          <img 
+          src="images/people.jpg" 
+          alt="Foto Pessoal"
+          id="UserImage" />
         </div>
 
         <h1 id="UserName">Luis Henrique</h1>
-        <a href="https://github.com/luisdasilvahenrique">
-          <img src="images/github.svg" alt="Imagem do github" /> Luis
-          Henrique</a
+        <a id="UserProfile" href="">
+          <img src="images/github.svg" alt="Imagem do github" /> <span id="UserLogin">Luis
+            Henrique</span> </a
         >
 
-        <p>Sou um estudante de front-end, curso redes de computadores na Universidade Federal do Ceará e adoro tecnologia, todos os dias aprendendo algo novo!</p>
+        <p id="UserBio">Sou um estudante de front-end, curso redes de computadores na Universidade Federal do Ceará e adoro tecnologia, todos os dias aprendendo algo novo!</p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -44,19 +50,19 @@
           </li>
 
           <li class="twitter">
-            <a href="https://twitter.com/maykbrito" target="_blank">
+            <a href="" target="_blank">
               <img src="images/twitter.svg" alt="Ícone twitter" />
             </a>
           </li>
 
           <li class="facebook">
-            <a href="https://facebook.com/maykbrito" target="_blank">
+            <a href="" target="_blank">
               <img src="images/facebook.svg" alt="Ícone facebook" />
             </a>
           </li>
 
           <li class="instagram">
-            <a href="https://instagram.com/maykbrito" target="_blank">
+            <a href="" target="_blank">
               <img src="images/instagram.svg" alt="Ícone instagram" />
             </a>
           </li>
@@ -64,30 +70,5 @@
 
       </div>
     </main>
-
-    <script>
-
-      const LinksSocialMedia = {
-        github: 'luisdasilvahenrique',
-        youtube: 'UC34AXdpl4_2g3QIWjHaN-mA',
-        facebook: 'luis.enrik.52',
-        instagram: 'luis_enrik_21',
-        twitter: 'maykbrito',
-      }
-
-      function changeSocialMediaLinks(){
-        for(let li of socialLinks.children){
-          const social = li.getAttribute('class')
-          
-        li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-          // alert(li.children[0].href)
-        }
-
-      }
-
-      changeSocialMediaLinks()
-     
-    </script>
-
-  </body>
+    <script src="main.js"></script>
 </html>
